@@ -1,0 +1,20 @@
+[
+    {
+        "id": "0",
+        "productName": "Monstera",
+        "productDiff": "Beginner level",
+        "productImg": ""
+    },
+    {
+        "id": "1",
+        "productName": "Palettblad",
+        "productDiff": "Beginner level",
+        "productImg": ""
+    },
+    {
+        "id": "2",
+        "productName": "Orkidé",
+        "productDiff": "Expert level",
+        "productImg": ""
+    }
+]

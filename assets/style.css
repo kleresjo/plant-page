@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;400&family=Roboto:wght@100;300;400;500&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(241, 241, 241);
+}
+
+:root {
+    --main-bg-color: #e6e6db;
+    --main-green-color: #2f3529;
+    --main-text-color: rgb(21, 21, 21);
+    --main-text-hover-color: #2b3f2c; 
+    --main-nav-color: #ccc19e;
+    --second-nav-color: #b0a275;
+}
+
+p, a {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: var(--main-text-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Jost', sans-serif;
+    color: var(--main-text-color);
+}
+
+/* STYLING FOR NAV */
+
+.meny-nav {
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: rgba(149, 157, 165, 0.085) 0px 8px 0px;
+}
+
+.fa-leaf {
+    color: var(--main-green-color);
+    font-size: 40px;
+}
+
+.meny-links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-right: 5%;
+}
+
+.meny-link {
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--main-text-color);
+}
+
+.logout-btn {
+    background-color: var(--main-green-color);
+    border: solid transparent 1px;
+    color: var(--main-bg-color);
+    font-size: 16px;
+    border-radius: 20px;
+    padding: 6px 10px 6px 10px;
+}
+
+.logout-btn:hover {
+    cursor: pointer;
+    border: solid var(--main-green-color) 1px;
+    background-color: transparent;
+    color: var(--main-green-color);
+}
+
+/* STYLING FOR MY ACCOUNT PAGE */
+
+.logged-in-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    padding-bottom: 15px;
+    border: solid hotpink 2px;
+}
+
+.username {
+    color: var(--main-text-color);
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 15px;
+}
+
+.account-h2 {
+    text-align: center;
+}
+
+.product-div {
+    display: flex;
+    justify-content: center;
+}
+
+.create-product-form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.product-input {
+    width: 100%;
+    border: solid var(--main-text-hover-color) 1px;
+    padding: 1%;
+    max-height: 200px;
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 20px;
+}
+
+.product-input:focus {
+    outline: none;
+    background-color: var(--main-nav-color);
+}
+
+.create-product-btn {
+    background-color: var(--main-green-color);
+    border: solid transparent 1px;
+    color: var(--main-bg-color);
+    border-radius: 20px;
+    width: 100px;
+    padding: 6px 10px 6px 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.create-product-btn:hover {
+    cursor: pointer;
+    border: solid var(--main-green-color) 1px;
+    background-color: transparent;
+    color: var(--main-green-color);
+}
+
+.create-product-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    row-gap: 30px;
+    margin: 5% 5% 5% 5%;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    border: #2f3529 solid 2px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.product-card:hover {
+    transition: 0.5s;
+    scale: 1.01;
+}
+
+.product-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.product-card-text {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 5%;
+}
+
+/* FOOTER STYLING */
+
+footer {
+    display: flex;
+    flex-direction: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25%;
+    justify-content: left;
+    align-items: center;
+    background-color: var(--main-text-hover-color);
+    padding: 5% 5% 5% 5%;
+}
+
+footer .fa-leaf {
+    color: var(--main-bg-color);
+    font-size: 100px;
+}
+
+footer .fa-leaf:hover {
+    color: var(--second-nav-color);
+}
+
+footer h3 {
+    color: var(--main-nav-color);
+}
+
+.footer-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-menu-contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-link {
+    color: var(--main-bg-color);
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    color: var(--main-nav-color);
+}
+
+.footer-p {
+    text-align: center;
+    font-size: 12px;
+    color: var(--second-nav-color);
+    background-color: var(--main-text-hover-color);
+    margin: 0;
+    padding-bottom: 10px;
+}
