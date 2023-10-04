@@ -3,6 +3,8 @@
 require_once __DIR__ . "/../classes/Template.php";
 require_once __DIR__ . "/../classes/UsersDatabase.php";
 require_once __DIR__ . "/../classes/ProductsDatabase.php";
+require_once __DIR__ . "/../scripts/insert-script.php";
+
 
 $is_logged_in = isset($_SESSION['user']);
 $logged_in_user = $is_logged_in ? $_SESSION['user'] : null;
@@ -23,14 +25,21 @@ Template::header("");
 
 <h2 class="account-h2"> Add a plant </h2>
 
-
 <div class="product-div">
     <form action="/admin-scripts/post-create-product.php" method="post" enctype="multipart/form-data" class="create-product-form">
         <input type="text" name="title" placeholder="Plant name" class="product-input">
         <textarea name="description" placeholder="Plant description" class="product-input"></textarea>
-        <input type="text" name="difficult_level" placeholder="Difficult level" class="product-input">
-        <input type="file" name="image" accept="image/*" id="edit-btn" class="image-btn">
-        <input type="submit" value="Save" class="create-product-btn">
+        <label for="Difficulty level">Choose a difficulty level:</label>
+        <form action="" method="post">
+            <select name="difficult_level">
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+            </select>
+
+            <input type="file" name="image" accept="image/*" id="edit-btn" class="image-btn">
+            <input type="submit" value="Save" class="create-product-btn">
+        </form>
     </form>
 </div>
 

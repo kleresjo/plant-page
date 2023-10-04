@@ -3,6 +3,7 @@
 require_once __DIR__ . "/../classes/Template.php";
 require_once __DIR__ . "/../classes/ProductsDatabase.php";
 require_once __DIR__ . "/../classes/UsersDatabase.php";
+require_once __DIR__ . "/../scripts/insert-script.php";
 
 // kontrollera att användaren är inloggad som admin
 $is_logged_in = isset($_SESSION["user"]);
@@ -20,24 +21,33 @@ $users_db = new UsersDatabase();
 $users = $users_db->get_all();
 $products = $products_db->get_all();
 
-// kod för att kunna skapa produkter
+// add a plant
 
 Template::header(""); ?>
 
-<h2 class="konto-h2"> Skapa en produkt </h2>
+<h2 class="konto-h2"> Add a plant </h2>
 
 <hr>
 
 <form action="/admin-scripts/post-create-product.php" method="post" enctype="multipart/form-data" class="skapa-produkt-card">
     <input type="text" name="title" placeholder="Titel" id="produkt-input"> <br>
     <textarea name="description" placeholder="Beskrivning" id="produkt-input"></textarea> <br>
-    <input type="file" name="image" accept="image/*" id="edit-btn"><br>
-    <input type="submit" value="Spara" class="produkt-btn">
+    <label for="Difficulty level">Choose a difficulty level:</label>
+    <form action="" method="post">
+        <select name="difficult_level">
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced</option>
+        </select>
+
+        <input type="file" name="image" accept="image/*" id="edit-btn" class="image-btn">
+        <input type="submit" value="Save" class="create-product-btn">
+    </form>
 </form>
 
 <hr>
 
-<!-- kod som skriver ut produkter -->
+<!-- this code writes out all plants -->
 
 <h2 class="konto-h2"> My plants </h2>
 

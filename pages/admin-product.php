@@ -2,6 +2,7 @@
 
 require_once __DIR__ . "/../classes/Template.php";
 require_once __DIR__ . "/../classes/ProductsDatabase.php";
+require_once __DIR__ . "/../scripts/insert-script.php";
 
 // kollar så att du är admin som är inloggad
 
@@ -28,24 +29,28 @@ Template::header("Update product");
 
 if ($product == null) : ?>
 
-    <h2>No product</h2>
+    <h2>You haven't registered any plants</h2>
 
 <?php else : ?>
 
     <form action="/admin-scripts/post-update-product.php?id=<?= $_GET["id"] ?>" method="post" enctype="multipart/form-data" class="skapa-produkt-card">
-        <input type="text" name="title" placeholder="Titel" value="<?= $product->title ?>"> <br>
-        <textarea name="description" placeholder="Description"><?= $product->description ?></textarea> <br>
+        <input type="text" name="title" placeholder="Titel" value="<?= $product->title ?>">
+        <textarea name="description" placeholder="Description"><?= $product->description ?></textarea>
         <label for="Difficulty level">Choose a difficulty level:</label>
-        <select id="difficulty_level_form" name="difficulty_level">
-            <option value="Beginner">Beginner</option>
-            <option value="Intermediate">Intermediate</option>
-            <option value="Advanced">Advanced</option>
-        </select> <br>
-        <input type="file" name="img_url" accept="image/*"> <br>
-        <input type="submit" value="Save" class="produkt-btn">
+        <form action="" method="post">
+            <form action="" method="post">
+                <select name="difficult_level">
+                    <option value="Beginner">Beginner</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Advanced">Advanced</option>
+                </select>
+                <input type="submit" name="submit">
+            </form>
+        </form>
+        <input type="file" name="image" accept="image/*">
     </form>
 
-    <p><b>Delete:</b></p>
+    <p>Delete:</p>
 
     <form action="/admin-scripts/post-delete-product.php" method="post">
         <input type="hidden" name="id" value="<?= $_GET["id"] ?>">

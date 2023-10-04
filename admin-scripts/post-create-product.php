@@ -7,7 +7,7 @@ $success = false;
 
 // Den här koden gör att man kan uppdatera produkter 
 
-if (isset($_POST["title"]) && isset($_POST["description"]) && isset($_POST["difficulty_level"])) {
+if (isset($_POST["title"]) && isset($_POST["description"]) && isset($_POST["difficult_level"])) {
     $upload_directory = __DIR__ . "/../assets/uploads/";
     $upload_name = basename($_FILES["image"]["name"]);
     $name_parts = explode(".", $upload_name);
@@ -19,7 +19,7 @@ if (isset($_POST["title"]) && isset($_POST["description"]) && isset($_POST["diff
     $success = move_uploaded_file($_FILES["image"]["tmp_name"], $full_upload_path);
 
     if ($success) {
-        $product = new Product($_POST["title"], $_POST["description"], $_POST["difficulty_level"], $full_relative_url);
+        $product = new Product($_POST["title"], $_POST["description"], $_POST["difficult_level"], $full_relative_url);
         $products_db = new ProductsDatabase();
         $success = $products_db->create($product);
     }
