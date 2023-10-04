@@ -13,12 +13,16 @@ body {
     --main-text-hover-color: #2b3f2c; 
     --main-nav-color: #ccc19e;
     --second-nav-color: #b0a275;
+    --main-white-color: rgb(241, 241, 241); 
+    --second-text-color: rgb(95, 93, 93);
 }
 
 p, a {
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
     color: var(--main-text-color);
+    line-height: 1.6;
+    letter-spacing: 0.5px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -29,11 +33,16 @@ h1, h2, h3, h4, h5, h6 {
 /* STYLING FOR NAV */
 
 .meny-nav {
+    width: 100%;
+    top: 0;
+    position: fixed;
     height: 80px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
-    box-shadow: rgba(149, 157, 165, 0.085) 0px 8px 0px;
+    background-color: var(--main-bg-color);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    z-index: 10;
 }
 
 .fa-leaf {
@@ -41,17 +50,30 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 40px;
 }
 
+.fa-leaf:hover {
+    color: var(--second-nav-color);
+}
+
 .meny-links {
     display: flex;
     align-items: center;
     gap: 40px;
-    margin-right: 5%;
 }
 
 .meny-link {
     text-decoration: none;
     font-size: 20px;
     color: var(--main-text-color);
+}
+
+.meny-link:hover {
+    text-decoration: underline;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
 }
 
 .logout-btn {
@@ -68,6 +90,126 @@ h1, h2, h3, h4, h5, h6 {
     border: solid var(--main-green-color) 1px;
     background-color: transparent;
     color: var(--main-green-color);
+    transition: 1s;
+    scale: 1.01;
+}
+
+/* HERO STYLING */
+
+.hero {
+    display: flex;
+    margin: 0;
+    width: 100%;
+    height: 700px;
+    background-image: url(./uploads/peter-zagar-bLgWa9b0ioY-unsplash.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero-text {
+    width: 30%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-title {
+    font-size: 40px;
+}
+
+.callout-btn {
+    border: solid transparent 1px;
+    background-color: var(--main-green-color);
+    border-radius: 25px;
+    padding: 10px 40px 10px 40px;
+    color: var(--main-bg-color);
+    font-size: 18px;
+}
+
+.callout-btn:hover {
+    border: solid var(--main-green-color) 1px;
+    background-color: transparent;
+    color: var(--main-green-color);
+    cursor: pointer;
+    transition: 1s;
+    scale: 1.01;
+}
+
+/* STYLING FOR POPULAR BLOCK */
+
+.title {
+    text-align: center;
+    font-size: 36px;
+}
+
+/* STYLING FOR API-BLOCK */
+
+.API-div {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 5% 0% 5% 0%;
+}
+
+.api-card {
+    border: var(--main-text-color) solid 2px;
+    border-radius: 20px;
+    background-color: var(--main-white-color);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.api-card:hover {
+    transition: 0.5s;
+    scale: 1.01;
+}
+
+.api-image {
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+    border-top-right-radius: 18px;
+    border-top-left-radius: 18px;
+}
+
+.api-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.api-text {
+    width: 50%;
+    padding-left: 5%;
+}
+
+.api-diff {
+    font-size: 12px;
+    color: var(--second-text-color);
+}
+
+.like-list {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.like-btn {
+    border: solid 1px var(--main-text-color);
+    border-radius: 100%;
+    padding: 5% 5% 4% 5%;
+}
+
+.fa-heart {
+    color: var(--main-text-color);
+    font-size: 16px;
+}
+
+.fa-heart:hover {
+    cursor: pointer;
 }
 
 /* STYLING FOR MY ACCOUNT PAGE */

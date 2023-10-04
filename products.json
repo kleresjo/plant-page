@@ -2,19 +2,25 @@
     {
         "id": "0",
         "productName": "Monstera",
-        "productDiff": "Beginner level",
-        "productImg": ""
+        "productDiff": "Beginner",
+        "productImg": "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3111&q=80"
     },
     {
         "id": "1",
-        "productName": "Palettblad",
-        "productDiff": "Beginner level",
-        "productImg": ""
+        "productName": "Bonsai tree",
+        "productDiff": "Advanded",
+        "productImg": "https://images.unsplash.com/photo-1512428813834-c702c7702b78?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2624&q=80"
     },
     {
         "id": "2",
-        "productName": "Orkidé",
-        "productDiff": "Expert level",
-        "productImg": ""
+        "productName": "Orchid",
+        "productDiff": "Advanded",
+        "productImg": "https://images.unsplash.com/photo-1583846712268-a77d97b7fd68?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3096&q=80"
+    },
+     {
+        "id": "3",
+        "productName": "Plant",
+        "productDiff": "Intermediate",
+        "productImg": "https://images.unsplash.com/photo-1584589167171-541ce45f1eea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3087&q=80"
     }
 ]

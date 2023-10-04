@@ -28,15 +28,19 @@ class Template
             <!-- Menyn -->
             <nav class="meny-nav">
                 <a href="/"><i class="fa-solid fa-leaf"></i></a>
+                <div class="nav-links">
+                    <a href="" class="meny-link">Discover</a>
+                    <a href="" class="meny-link">Plant care</a>
+                </div>
                 <div class="meny-links">
                     <?php if (!$is_logged_in) : ?>
-                        <a href="/pages/login.php" class="meny-link">Logga in</a>
-                        <a href="/pages/register.php" class="meny-link">Registera konto</a>
+                        <a href="/pages/login.php" class="meny-link">Sign in</a>
+                        <a href="/pages/register.php" class="meny-link">Register account</a>
                     <?php elseif ($is_admin) : ?>
-                        <a href="/pages/admin.php" class="meny-link">Admin</a>
+                        <a href="/pages/admin.php" class="meny-link">Admin page</a>
                     <?php endif; ?>
                     <?php if ($is_logged_in) : ?>
-                        <a href="/pages/mypage.php" class="meny-link">Mitt konto</a>
+                        <a href="/pages/mypage.php" class="meny-link">My plants</a>
                         <form action="/scripts/post-logout.php" method="post">
                             <input class="logout-btn" type="submit" value="Log out">
                         </form>
@@ -70,7 +74,6 @@ class Template
             </div>
         </body>
         <script src="https://kit.fontawesome.com/49654d2d6c.js" crossorigin="anonymous"></script>
-
         </html>
 <?php }
 }

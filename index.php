@@ -6,19 +6,23 @@ require_once __DIR__ . "/classes/Template.php";
 Template::header("");
 ?>
 
-<div>
-    <h2> About Plant page </h2>
-    <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed sapiente repellat accusamus doloribus laborum minus. Tempore, aliquid sunt? Doloremque pariatur a sint perspiciatis omnis vel repellat? Beatae architecto id nam perspiciatis consectetur debitis optio rem magnam nostrum inventore itaque voluptates illum voluptatum sequi sed dignissimos, unde veritatis minus delectus quibusdam?
-    </p>
+<div class="hero">
+    <div class="hero-text">
+        <h1 class="hero-title">Welcome to your virtual plant diary</h1>
+        <p class="hero-p">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus, quisquam?
+        </p>
+        <button class="callout-btn">LOREM</button>
+    </div>
 </div>
-<h2>Popular products</h2>
+
+<h2 class="title">Popular plants</h2>
 
 <div class="API-div">
 
 </div>
 
-<!-- kod för att hämta produkter från mitt API -->
+<!-- this code fetches my API -->
 
 <script>
     fetch('./products.json')
@@ -29,9 +33,17 @@ Template::header("");
 
         .then(jsondata => {
             jsondata.forEach(product => {
-                const productLine = `<div class="produkt-card"><img id="produkt-image" src="${product.productImg}"></img>
-            <p class="produkt-titel">${product.productName}</p>
-            <p class="produkt-diff">${product.productDiff}</p>
+                const productLine = `<div class="api-card">
+            <img class="api-image" src="${product.productImg}"></img>
+            <div class="api-content">
+            <div class="api-text">
+            <h3 class="api-title">${product.productName}</h3>
+            <p class="api-diff">${product.productDiff}</p>
+            </div>
+            <div class="like-list">
+            <button class="like-btn"><i class="fa-solid fa-heart"></i></button>
+            </div>
+            </div>
             </div>`
                 document.querySelector('.API-div').insertAdjacentHTML('beforeend', productLine);
             });
